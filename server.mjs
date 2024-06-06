@@ -36,6 +36,7 @@ imgUrls=[]
 titles=[];
 dates=[];
 urls=[];
+//Getting author names
     const paragraphs = $('article p');
    let check=true;
    const isDigit = (str) => /^\d+$/.test(str);
@@ -61,7 +62,7 @@ urls=[];
     
     });
     console.log(textContents)
-  
+  //Getting  articles titles
     const title = $('article h2');
    
   
@@ -73,7 +74,7 @@ urls=[];
       titles.push(titleContent);
     });
     console.log(titles)
-
+//grtting published dates
     const published_date = $('article .h');
    
   
@@ -89,7 +90,7 @@ urls=[];
       }
     });
     console.log(dates)
-
+//getting article links
     const url = $('article div');
    
   
@@ -104,7 +105,7 @@ urls=[];
 
     });
     console.log(urls)
-
+//getting  author images
     const images= $('article .fz');
    
   
