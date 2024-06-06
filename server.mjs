@@ -141,7 +141,7 @@ app.post('/scrape', async (req, res) => {
     res.send({success:true,message:"scraped Success"});
   } catch (error) {
     console.error(error);
-    res.send({ message: 'Failed to extract text content' });
+    res.send({ message: error });
   }
 });
 
