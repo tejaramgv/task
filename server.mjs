@@ -17,7 +17,11 @@ let urls=[];
 
 const extractTextContent = async (url) => {
   //using puppeteer to scrape the data
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    headless: true,
+    executablePath: '/usr/bin/google-chrome-stable',
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
   const page = await browser.newPage();
   await page.goto(url, { waitUntil: 'networkidle2' });
 
